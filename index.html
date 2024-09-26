@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+        <script src="https://kit.fontawesome.com/0315c40467.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="scripts/javascripts.js"></script>
+        <title>Sydney Rental Car</title>
+  </head>
+  <body>
+    <!---------------- Logo ------------>
+    <header>
+      <div class="logo">
+        <img style="width: 150px" src="images/logo.png" alt="" />
+      </div>
+    </header>
+    <!---------------- Navigation bar ---------------->
+    <div class="container">
+      <nav class="menu">
+        <ul>
+          <li><a href="">About Us</a></li>
+          <li><a href="">Services</a></li>
+          <li><a href="">Project Gallery</a></li>
+          <li><a href="">Partner</a></li>
+          <li><a href="">Contact</a></li>
+          <li><a href="">Career</a></li>
+          <li><a href="">Reference</a></li>
+          <li>
+            <input type="text" placeholder="Quick find..." />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </li>
+          <li>
+            <a href=""></a
+            ><button>
+              <i class="fa-solid fa-cart-shopping"></i>Your order
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <h2>
+      Welcome to Sydney Rental Car. Our mission is to help our clients meet
+      their desires and plan goals.
+    </h2>
+    <!----------------------Slider --------------------->
+    <section class="slider">
+      <div class="slider-content">
+        <div class="slider-content-left">
+          <div class="slider-content-left-top-container">
+            <div class="slider-content-left-top">
+              <div class="list">
+                <div class="item"><img src="images/lexus.png" alt="lexus" /></div>
+                <div class="item"><img src="images/audi_a8.png" alt="audi" /></div>
+                <div class="item"><img src="images/porches1.jpeg" alt="porches"/></div>
+                <div class="item"><img src="images/maserati.png" alt="maserati"/></div>
+                <div class="item"><img src="images/toyota2.png" alt="toyota"/></div>                
+              </div>
+                <div class="slider-content-left-top-btn">
+                    <button id='nextBtn'> < </button>
+                    <button id='prevBtn'> > </button>
+                </div>
+
+            <script>
+                let ls = document.querySelector('.slider-content-left-top .list');
+                let items = document.querySelectorAll('.slider-content-left-top .list .item');
+                let next = document.getElementById('nextBtn');
+                let prev = document.getElementById('prevBtn');
+
+                let active = 0;
+                let lengthItems = items.length;
+
+                prev.onclick = function () {
+                    if (active + 1 > lengthItems - 1) {
+                        active = 0;
+                    } else {
+                        active += 1;
+                    }
+                    reloadSlider();
+                }
+
+                next.onclick = function () {
+                    if (active - 1 < 0) {
+                        active = lengthItems - 1;
+                    } else {
+                        active -= 1;
+                    }
+                    reloadSlider();
+                }
+
+                function reloadSlider() {
+                    let checkLeft = items[active].offsetLeft;
+                    ls.style.left = -checkLeft + 'px';
+                }
+            </script>    
+            </div>
+          </div>
+        </div>
+        <div class="slider-content-right">
+          <li>
+            <a href=""><img src="images/nissan.png" alt="" /></a>
+          </li>
+          <li>
+            <a href=""><img src="images/mercedes.png" alt="" /></a>
+          </li>
+        </div>
+      </div>
+    </section>
+
+    <!------------- main ---------->
+    <main>
+      <div class="working-hour">
+        <h3>
+          We are a Sydney rental company that has had many opportunities to
+          cooperate and do business with famous people. As well as talking about
+          the reliability we provide, people can feel satisfaction when coming
+          to our car rental service. We always try our best to bring customers
+          the best value.
+        </h3>
+        <h3>Working Hours:</h3>
+        <p>
+          Monday - Thursday: 6:00am - 6:00pm<br />
+          Friday: 6:00am - 4:00pm<br />
+          Saturday: 8:00am - 6:00pm<br />
+          Sunday: Closed
+        </p>
+        <h4>
+          !!! We now provide a FREE one-week membership with a lot of discounts,
+          equipment to help you have a wonderful trip!!!
+        </h4>
+      </div>
+      <br />
+
+      <section>
+        <div class="link-box socials">
+          <div class="link-box-legal">
+            <h3 class="link-title">Legal</h3>
+            <ul>
+              <li><a href="">Privacy</a></li>
+              <li><a href="">Terms</a></li>
+              <li><a href="">Cookie</a></li>
+              <li><a href="">Intellectual Property</a></li>
+            </ul>
+
+            <h3 class="link-title">Socials</h3>
+            <ul>
+              <li>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fa-brands fa-tiktok"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- <div class="link-box">
+                    <ul>
+                      <li><a href="">FAQ</a></li>
+                      <li><a href="">Destinations</a></li>
+                      <li><a href="">Press Room</a></li>
+                      <li><a href="">Contact</a></li>
+                      <li><a href="">Promo Code</a></li>
+                    </ul>
+                  </div>-->
+      </section>
+    </main>
+  </body>
+
+  <footer>
+    <p class="consent">
+      The Sydney Car Rental is a premium car rental service located in Sydney,
+      offering top-notch services to both local and international customers. In
+      addition to that, our existing website has now been upgraded to a mobile
+      app for supporting our customer can easily find out us.
+    </p>
+    <p class="consent">Hotline: +123 456789</p>
+
+    <div class="copyright">
+      <div class="rights">
+        <small>&copy; 2024 Car Rental. All Rights Reserved</small>
+      </div>
+    </div>
+  </footer>
+</html>
